@@ -1,3 +1,10 @@
+This repository is tmux package for synology DSM.
+
+Files in 'synology' and 'SynoBuildConf' are released under MIT license.
+All other files have a license and copyright notice at their start.
+
+==============================================================================
+
 Welcome to tmux!
 
 tmux is a "terminal multiplexer", it enables a number of terminals (or windows)
