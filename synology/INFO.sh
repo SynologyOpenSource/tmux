@@ -4,10 +4,10 @@
 . /pkgscripts/include/pkg_util.sh
 
 package="tmux"
-version="1.9-a"
+version="2.8"
 displayname="tmux"
 arch="$(pkg_get_platform) "
-maintainer="Synology Inc."
+maintainer="Matthias Lohr <mail@mlohr.com>"
 description="Tmux package for Synology DSM."
 support_url="https://github.com/tmux/tmux"
 thirdparty="yes"
