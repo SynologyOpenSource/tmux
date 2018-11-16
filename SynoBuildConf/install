@@ -30,7 +30,7 @@ InstallSynologyConfig(){
 }
 
 MakePackage() {
-    source /pkgscripts/include/pkg_util.sh
+    source /pkgscripts-ng/include/pkg_util.sh
     pkg_make_package $INST_DIR $PKG_DIR
     pkg_make_spk $PKG_DIR $PKG_DEST
 }
