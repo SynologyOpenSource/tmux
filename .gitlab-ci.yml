@@ -1,5 +1,9 @@
 
+stages:
+  - build
+
 6.1-apollolake:
+  stage: build
   image: matthiaslohr/dsmpkg-env:6.1-apollolake
   script:
     - git clone https://github.com/SynologyOpenSource/pkgscripts-ng.git /pkgscripts-ng
