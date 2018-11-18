@@ -1,6 +1,8 @@
 #!/bin/bash
 # Copyright (c) 2000-2016 Synology Inc. All rights reserved.
 
+TMUX_VERSION="2.8"
+
 case ${MakeClean} in
     [Yy][Ee][Ss])
         make distclean
@@ -13,6 +15,7 @@ NCURSES_LIBS="$(pkg-config ncurses --libs)"
 CFLAGS="${CFLAGS} ${NCURSES_INCS}"
 LDFLAGS="${LDFLAGS} ${NCURSES_LIBS}"
 
+curl -k -L "https://github.com/tmux/tmux/releases/download/${TMUX_VERSION}/tmux-${TMUX_VERSION}.tar.gz" | tar xz -C ./ --strip-components 1
 env CC="${CC}" AR="${AR}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 ./configure ${ConfigOpt}
 
