@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2000-2016 Synology Inc. All rights reserved.
+# Copyright (c) 2000-2021 Synology Inc. All rights reserved.
 
 PKG_NAME="tmux"
 INST_DIR="/tmp/_${PKG_NAME}"
@@ -26,6 +26,7 @@ GenerateINFO() {
 
 InstallSynologyConfig(){
     cp -r synology/scripts/ "${PKG_DIR}"
+    cp -r synology/conf/ "${PKG_DIR}"
     cp synology/PACKAGE_ICON{,_256}.PNG "${PKG_DIR}"
 }
 

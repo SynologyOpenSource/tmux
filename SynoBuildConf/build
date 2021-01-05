@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2000-2016 Synology Inc. All rights reserved.
+# Copyright (c) 2000-2021 Synology Inc. All rights reserved.
 
 case ${MakeClean} in
     [Yy][Ee][Ss])
@@ -13,8 +13,9 @@ NCURSES_LIBS="$(pkg-config ncurses --libs)"
 CFLAGS="${CFLAGS} ${NCURSES_INCS}"
 LDFLAGS="${LDFLAGS} ${NCURSES_LIBS}"
 
+autoreconf -if
+
 env CC="${CC}" AR="${AR}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 ./configure ${ConfigOpt}
 
 make ${MAKE_FLAGS}
-    

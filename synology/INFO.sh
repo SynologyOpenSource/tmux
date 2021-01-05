@@ -1,10 +1,11 @@
 #!/bin/sh
-# Copyright (c) 2000-2016 Synology Inc. All rights reserved.
+# Copyright (c) 2000-2021 Synology Inc. All rights reserved.
 
 . /pkgscripts/include/pkg_util.sh
 
 package="tmux"
-version="1.9-a"
+version="1.9.1-1001"
+os_min_ver="7.0-40850"
 displayname="tmux"
 arch="$(pkg_get_platform) "
 maintainer="Synology Inc."
