@@ -9,7 +9,7 @@ case $1 in
 		exit 0
 	;;
 	status)
-		if [ -h "/usr/bin/tmux" ]; then
+		if [ -h "/usr/local/bin/tmux" ]; then
 			exit 0
 		else
 			exit 1
